@@ -16,8 +16,8 @@ class Numbers {
     return numOfNums.length;
   }
   printNumbers() {
-    //print the numbers in data
-    // this.data.forEach(this.data => console.log(data.length))
+    // print the numbers in data
+    this.data.forEach(number => console.log(number))
   }
   odds() {
     //return the odd numbers in data
@@ -37,7 +37,7 @@ class Numbers {
         evenNums.push(this.data[i]);
       }
     }
-    return(evenNums)
+    return evenNums;
   }
   sum() {
     //return the sum of the numbers
@@ -45,11 +45,15 @@ class Numbers {
     for (let i = 0; i <this.data.length; i++) {
       sum += this.data[i];
     }
-    return (sum);
+    return sum;
   }
   product() {
     //return the product of the numbers
-
+    let product = 1
+    for (let i = 0; i <this.data.length; i++) {
+      product = product * this.data[i];
+    }
+    return product;
   }
   greaterThan(target) {
     //return the numbers greater than the target
